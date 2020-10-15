@@ -1,0 +1,99 @@
+<!-- /templates/customers/register.liquid -->
+
+<div class="page-width page-container">
+
+  <div class="customer__account-form text-center">
+
+    <div class="form-vertical">
+      {% form 'create_customer' %}
+
+        <h1 class="h2">{{ 'customer.register.title' | t }}</h1>
+
+        {{ form.errors | default_errors }}
+
+        <label for="FirstName" class="label--hidden">{{ 'customer.register.first_name' | t }}</label>
+        <input type="text" name="customer[first_name]" id="FirstName" class="input-full" placeholder="{{ 'customer.register.first_name' | t }}" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+
+        <label for="LastName" class="label--hidden">{{ 'customer.register.last_name' | t }}</label>
+        <input type="text" name="customer[last_name]" id="LastName" class="input-full" placeholder="{{ 'customer.register.last_name' | t }}" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+
+        <label for="Email" class="label--hidden">{{ 'customer.register.email' | t }}</label>
+        <input type="email" name="customer[email]" id="Email" class="input-full {% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'customer.register.email' | t }}" {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+
+        <label for="CreatePassword" class="label--hidden">{{ 'customer.register.password' | t }}</label>
+        <input type="password" name="customer[password]" id="CreatePassword" class="input-full {% if form.errors contains 'password' %} input--error{% endif %}" placeholder="{{ 'customer.register.password' | t }}">
+
+        <p>
+          <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
+        </p>
+        <a href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
+
+      {% endform %}
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  
+  	
+  function GetParameterValues(param) {  
+       var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+       for (var i = 0; i < url.length; i++) {  
+           var urlparam = url[i].split('=');  
+           if (urlparam[0] == param) {  
+               return urlparam[1];  
+           }  
+       }  
+   }  
+   var sub_id = GetParameterValues('sub_id');
+     var pr_id = GetParameterValues('pr_id');
+ 
+  	console.log('primary_id->',pr_id);
+  
+	pr_id = pr_id.split('_')[1];
+  console.log('pr_id_after_split=',pr_id);
+
+  
+  //sub_id
+  console.log('primary_id');
+  console.log(pr_id);
+  
+  if(pr_id != 'undefined' && pr_id !=null)
+  {
+  
+  	//console.log('user come through referral link');
+    setCookie('user_wants_subscription', '1');
+    
+     setCookie('refree_sub_id', sub_id);
+      setCookie('refree_pr_id', pr_id);
+
+  }else
+  {
+    console.log('normal user');
+  }
+  function setCookie(key, value) {  
+    var expires = new Date();  
+    expires.setTime(expires.getTime() + 604800);  
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';  
+  } 
+//   $(function (params) {
+//     $('#proceed-btn').click(function (params) {
+//       if (!$('#box_1').is(":checked")) {
+//         alert('Select subscription box.');
+//         return;
+
+//       }
+//       if ($(this).data('li')=="li") {
+//         alert('go for payment');
+//       } else {
+//         // alert('go for login');
+//         setCookie('user_wants_subscription', '1');  
+//         window.location.href="https://peachiieshop.com/account"
+//       }
+
+//     })
+//   })
+   
+ </script>

@@ -1,0 +1,158 @@
+<!-- /templates/page.liquid -->
+{% if shop.customer_accounts_enabled %}
+    {% if customer %}
+        <script> var is_login = true;</script>
+    {% assign redirect_link = "/pages/sub_payment" %}
+
+    {% else %}
+        <script> var is_login = false;</script>
+    {% assign redirect_link = "/account" %}
+    {% if shop.customer_accounts_optional %}
+    {% endif %}
+    {% endif %}
+{% endif %}
+
+<style>
+    .check-box {
+        position: relative;
+    }
+    label.box-check {
+        display: block;
+        position: relative;
+        padding-left: 0;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        float: left;
+        width: 100%;
+        padding:10px;
+        border: 2px solid #dedbde;
+    }
+    .box-check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    span.check2 {
+        position: absolute;
+        top: -12px;
+        right: -5px;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+    }
+    .box-check input:checked ~ .check2 .check-icon {
+        display: block;
+    }
+    span.check2 .check-icon {
+        display: none;
+    }
+    label.box-check.on {
+        border: 2px solid #fea6da;
+    }
+</style>
+<script></script>
+<div class="page-width page-container">
+    <div class="rte rte--indented-images"> 
+        {% comment %}
+            {{page.content}}
+        {% endcomment %}
+        <div style="text-align: center; font-size: 30px;">Choose your subscription plan</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="box-check ">
+                        <input id="box_1" type="checkbox" value=1>
+                        <img src="https://cdn.shopify.com/s/files/1/2709/5762/files/peachiiebox_480x480.png?v=1591695793" alt="" width="350" height="350" />
+                        <span class="check2">
+                            <div class="check-icon"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+                        </span>
+                        <p> Peachiee - Box</p>
+                        <p> Plan Price $75</p>
+                        <p> Shipping $3</p>
+                    </label>
+                </div>
+            </div>
+	        <div class="row">
+                <div class="col-md-12">
+                    {% if customer %}
+                        <!-- user logged in -->
+                        <button id="proceed-btn" data-li="ok">Proceed</button>
+                        {% else %}
+                        <!-- user not logged in -->
+                        <button id="proceed-btn" data-li="no">Proceed</button>
+                    {% endif %}
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	        <script>
+                function setCookie(key, value) {  
+                    var expires = new Date();  
+                    expires.setTime(expires.getTime() + 604800);  
+                    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';  
+                } 
+                $(function (params) {
+                    $('#proceed-btn').click(function (params) {
+                        if (!$('#box_1').is(":checked")) {
+                            alert('Select subscription box.');
+                            return;
+                            
+                        }
+                        if ($(this).data('li')=="li") {
+                            alert('go for payment');
+                        } else {
+                            // alert('go for login');
+                            setCookie('user_wants_subscription', '1');  
+                            window.location.href="https://peachiieshop.com/account"
+                        }
+                        
+                    })
+                })
+                /*
+                function redirect_to_payment(is_login) {
+                    console.log(is_login);
+                    
+                    if(!is_login) {
+                        console.log('not login');
+                        window.location.href='/account/login?msg=1';
+                        return false;
+                    } else {
+                        console.log('login');
+                    }
+
+
+                if ($('#box_1').is(":checked") && $('#box_2').is(":checked") )
+                {
+                
+                console.log('both box subscription');
+
+                window.location.href='/pages/sub_payment?id=3';
+                }else if($('#box_1').is(":checked"))
+                {
+                console.log('only box one is checked');
+                window.location.href='/pages/sub_payment?id=1';
+                }else if($('#box_2').is(":checked"))
+                {
+                window.location.href='/pages/sub_payment?id=2';
+                console.log('only box two is checked');   
+
+                }
+                else
+                {
+                alert('please select a box');
+                
+                }
+
+                }
+                */
+     
+    
+      </script>
+   </div>
+</div
+

@@ -1,0 +1,143 @@
+<script>
+  const htmlIframe=`
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reviews Importer</title>
+         <script>
+        var infoShop="{{ shop.metafields.scm_review_importer.shop_info_setting }}";
+        var reviewsInFo= "";
+        var blockReviewFirst= "{{ shop.metafields.scm_review_importer.reviews_happyPage }}";
+        <\/script>
+            <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/scm-bootstrap.css?version=18" rel="stylesheet">
+    <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/scm-review-importer.css?version=18" rel="stylesheet">
+    <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/photo-flags.css?version=18" rel="stylesheet">
+    <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/fontawesome/css/all.min.css?version=18" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;display=swap" rel="stylesheet">
+    <style>
+        {% include 'reviews-importer-css-custom' %}
+    </style>
+  </head>
+  <body style="">
+          <div id="scm-review-importer-value" data-url="https://reviews.smartifyapps.com/api/load-more-happy-page" data-type= "happyPage" data-shopname="{{ shop.permanent_domain}}" data-productidshopify="" data-pagecurrent="1" data-rate="null"
+             data-reviewperpage="10"></div>
+          <div class="scm-row">
+              </div>
+                  <div id="reviewImporter">
+    <div class="scm-row">
+    </div>
+    <div class="parent-loader">
+        <div class="loader-load-more"></div>
+    </div>
+    <div class="scm-pagination-load-more">
+        <button id="scm-btn-load-more" class="scm-btn-load-more">{{ 'smart_aliexpress_review.reviews_list.button_load_more' | t}}</button>
+    </div>
+    <div class="last-element"></div>
+</div>
+          <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/jQuery.js">
+    <\/script>
+    <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/helper.js?version=18">
+    <\/script>
+    <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/reviewPage.js?version=18">
+    <\/script>
+    <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/writeReview.js?version=18">
+    <\/script>
+  </body>
+  </html>
+  `;
+</script>
+<script>
+function createPopupHtml(content, photos) {
+    let photosAray = JSON.parse(atob(photos));
+    let contentHtml = content;
+    let photoHtml = "";
+    let photoDotHtml = "";
+    photosAray.forEach((photo, index) => {
+        let indexDot = index + 1;
+        photoHtml = photoHtml + `<div class="scm-slide"><img src="${photo}"></div>`;
+        photoDotHtml = photoDotHtml + `<div class="column scm-slide-dot cursor" onclick="currentSlide(${indexDot})">
+    <img src="${photo}" alt="Custom text">
+</div>`;
+    })
+    return `<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reviews Importer</title>
+        <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/scm-bootstrap.css?version=18" rel="stylesheet">
+        <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/scm-review-importer-popup.css?version=18" rel="stylesheet">
+        <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/fontawesome/css/all.min.css" rel="stylesheet">
+        <link href="https://d1bu6z2uxfnay3.cloudfront.net/css/assets/css/photo-flags.css?version=18" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+         <script>
+                var infoShop="{{ shop.metafields.scm_review_importer.shop_info_setting }}";
+         <\/script>
+         <style>
+            {% include 'reviews-importer-css-custom' %}
+        </style>
+    </head>
+    <body>
+        <button class="scm-close-popup"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="scm-review-importer-popup">
+            <div class="scm-row">
+                <div class="scm-col-6 left">
+                    <div class="img-popup">
+                        ${photoHtml}
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                </div>
+                <div class="scm-col-6 right">
+                    <div class="content-popup">
+                        ${contentHtml}
+                        <div class="scm-slide-dot-container">
+                            ${photoDotHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/jQuery.js"><\/script>
+        <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/helper.js?version=18"><\/script>
+        <script src="https://d1bu6z2uxfnay3.cloudfront.net/js/frontend/reviewPagePopup.js?version=18"><\/script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("scm-slide");
+                var dots = document.getElementsByClassName("scm-slide-dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        <\/script>
+    </body>
+</html>`;
+}
+</script>
+{{ "reviews-importer.css" | asset_url | stylesheet_tag }}
+        <div class="scm-container" style="display: none;">
+            <div id="scm-reviews-importer">
+                <iframe id="scm-reviews-importer-iframe" width="100%"></iframe>
+            </div>
+        </div>
+

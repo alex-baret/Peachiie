@@ -1,0 +1,198 @@
+<script>
+  	var existingScript = document.getElementById('primebPopper');
+
+  	if (!existingScript) {
+      const scriptpopperb = document.createElement('script');
+      scriptpopperb.src = 'https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js';
+      scriptpopperb.id = 'primebPopper';
+      document.body.appendChild(scriptpopperb);
+	
+	  const scripttippyb = document.createElement('script');
+	  scripttippyb.src = 'https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js';
+      scripttippyb.id = 'primebTippy';
+      document.body.appendChild(scripttippyb);
+		// $.getScript("https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js", function(){
+			 
+        // });
+  	}
+</script>
+<script type="text/javascript">
+
+</script> 
+
+	
+	
+
+			{% assign primebMobileSize = primebMobileSize | default: 100 %}
+			{% assign primebTabletSize = primebTabletSize | default: 100 %}
+			
+			<style>
+				.prime-d-block{display:block;}
+				.prime-d-inline-block{display:inline-block;}
+				.prime-mr-1{margin-right: .25rem;} 
+				.prime-ml-1{margin-left: .25rem;}
+				.prime-mt-1{margin-top: .25rem;}
+				.prime-mb-1{margin-bottom: .25rem;}   
+
+				
+
+			</style>
+			
+			{% assign primebProduct = product %}
+			{% assign primebCustId = customer.id %}
+			{% assign primebVarient = product.variants.size %}
+			{% assign primebProdPrice = product.price | money_without_currency | remove: "," %}
+			{% assign primebCustomerTag = customer.tags | downcase %}
+
+			{% assign primebTemplate = template | downcase %}
+			
+			{% assign primemetafield = primebProduct.metafields %}
+			{% assign primebProductTitle = primebProduct.title | downcase %}
+			{% assign primebProductType = primebProduct.type | downcase %}
+			{% assign primebProductVendor = primebProduct.vendor | downcase %}
+			{% assign primebShopifyTags = primebProduct.tags | downcase %}
+			{% assign primebProductWeight = product.variants.first.weight %}
+			{% assign primebUTC = "now" | date: "%s" %}
+			{% assign primebstartTime = "633902400"  %}
+			{% assign primebEndTime = "2053972800"  %}
+			{% assign primebMaxDisplayBadge = primebMaxDisplayBadge | default: 10 %}	
+			{% assign primebCreatedDateSec = primebProduct.created_at | date: "%s" %}
+			{% assign primebDateDiff = "now" | date: "%s" | minus: primebCreatedDateSec %}
+			{% assign primebCollectionIds = primebProduct.collections | map: "id" %}			
+			{% assign primebBadgeCounter = 1 %}
+			{% assign VariantCount = product.variants.size %}
+
+
+			{% assign SaleAmount    = 0 %}	
+			{% assign SalePercent   = 0 %}
+                        {% if primebProduct.price and primebProduct.compare_at_price %}
+				{% assign SaleAmount = primebProduct.compare_at_price | minus: primebProduct.price %}	
+				{% if SaleAmount > 0 %}
+                	{% assign SalePercent = SaleAmount | times: 100.0 | divided_by: primebProduct.compare_at_price %}
+           		{% endif %}
+        	{% endif %}
+        	{% assign Inventory = 0 %}
+        	{% for productVariant in primebProduct.variants %}
+                    {% assign Inventory = Inventory | plus: productVariant.inventory_quantity %}			
+                {% endfor %}
+                <div class="primeBadges {{primebOuterClass}} prime-d-block" style="{{ primebOuterStyle }}">	
+  	{% comment %} Start Badge: 1 {% endcomment %}
+  	{% if primebBadgeCounter <= primebMaxDisplayBadge %}
+  	 {% assign isStartbShowBadge = false %} {% assign primebProductIds = "4531655016513,4534447931457" | split: "," %}
+						{% assign isprimebProductFound = false %}
+						{% assign primebProductId = primebProduct.id | downcase %}
+                        {% if primebProductIds contains primebProductId %}
+                            {% assign isprimebProductFound = true %}
+                        {% endif %}			
+			{% if  true == isprimebProductFound  %}{% assign isStartbShowBadge = true %}{% endif %}{% assign primebUTC 		= "now" | date: "%s" %}
+			{% assign primebUTC 		= primebUTC | plus: 0 %}
+			{% assign primebStartTime = 633902400  %}
+			{% assign primebEndTime = 2053972800  %}
+			{% if primebStartTime <= primebUTC and primebEndTime >= primebUTC %}{% if isStartbShowBadge == true %} 
+				{% assign primebBadgeCounter = primebBadgeCounter | plus: 1 %}
+					<div class="primebDesktop {{primebInnerClass}}"   onclick="redirectLink('');" style="{{ primebInnerStyle }} ">
+
+    <div style="box-sizing: border-box; color: rgb(255, 255, 255); font-size: 14px; position: relative; max-width: 100%; border-radius: 2em; padding: 0.5em 1em; background-image: linear-gradient(to right, rgb(255, 141, 198), rgb(255, 141, 198));;">        
+        <div  class="badgetitle prime-font-adjust" data-defaultsize= '14px' data-mobilesize= '0' data-tabletsize= '0' style="white-space: normal; overflow: hidden; text-align: center;">
+            Subscribe Now!      
+        </div>
+    </div>
+</div>
+
+{% endif %}
+			{% endif %}	{% endif %}
+	{% comment %} End Badge: 1 {% endcomment %}	
+    </div>
+		
+		
+  		<script type="text/javascript">
+
+			document.addEventListener('DOMContentLoaded', (event) => {
+				// const primeinstances2 = tippy('[data-tippy-content]');
+				// instances2.destroy();
+				resizeFunction();
+				setTimeout(function(){ 
+					var primeinstances2 = tippy('[data-tippy-content]');
+				}, 500);
+				
+			})
+
+			window.addEventListener('resize', resizeFunction);
+
+			function resizeFunction() { 
+				var fontadjust = document.getElementsByClassName('prime-font-adjust');
+				var heightadjust = document.getElementsByClassName('prime-height-adjust');
+
+				var xsdevice = window.matchMedia( "(max-width: 575.98px)" );
+				var smdevice = window.matchMedia( "(max-width: 767.98px)" );
+				var mddevice = window.matchMedia( "(max-width: 991.98px)" );
+				var lgdevice = window.matchMedia( "(max-width: 1199.98px)" );
+				var xldevice = window.matchMedia( "(min-width: 1200px)" );
+
+				for (var i = 0; i < fontadjust.length; i++) {
+					var mobilesize = '';
+					var tabletsize = '';
+					mobilesize = fontadjust[i].getAttribute('data-mobilesize');
+					tabletsize = fontadjust[i].getAttribute('data-tabletsize');
+
+					fontadjust[i].style.fontSize = 'inherit';
+
+					if (xsdevice.matches || smdevice.matches ){
+						if(mobilesize > 0){
+							fontadjust[i].style.fontSize = mobilesize+'px';
+
+						}
+					}else if(mddevice.matches){
+						if(tabletsize > 0){
+							fontadjust[i].style.fontSize = tabletsize+'px';
+
+						}
+					}
+				}
+				var heightadjust = document.getElementsByClassName('prime-height-adjust');
+				for (var i = 0; i < heightadjust.length; i++) {
+					var image = heightadjust[i].getElementsByClassName("primebImage");
+					var mobileheight = '';
+					var tabletheight = '';
+
+					var defaultHeight = heightadjust[i].getAttribute('data-defaultheight');
+					mobileheight = heightadjust[i].getAttribute('data-mobileheight');
+					tabletheight = heightadjust[i].getAttribute('data-tabletheight');
+
+					// image[0].style.height = defaultHeight+'px';
+					image[0].style.maxHeight = defaultHeight+'px';
+
+					if (xsdevice.matches || smdevice.matches ){
+						if(mobileheight > 0){
+							// image[0].style.height = mobileheight+'px';
+							image[0].style.maxHeight = mobileheight+'px';
+							
+						}
+					}else if(mddevice.matches){
+						if(tabletheight > 0){
+							// image[0].style.height = tabletheight+'px';
+							image[0].style.maxHeight = tabletheight+'px';
+							
+						}
+					}
+				}
+
+			} 
+
+			function redirectLink(badgeval) {
+
+				if(badgeval != ''){
+
+				// console.log('clicke');
+					var badgelink = badgeval;
+				
+					window.location.href = badgelink;
+
+				}
+			
+			}
+
+		</script> 
+
+		
+

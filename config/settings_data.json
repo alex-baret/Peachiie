@@ -1,0 +1,494 @@
+{
+  "current": {
+    "color_body_bg": "#fff9fe",
+    "color_body_headings": "#000000",
+    "color_body_text": "#f800ae",
+    "color_body_links": "#000000",
+    "color_button_bg": "#fd43b7",
+    "color_button_text": "#000000",
+    "color_sale_badge": "#000000",
+    "color_borders": "#dc159e",
+    "color_nav_bg": "#ffffff",
+    "color_nav_text": "#1a1a1a",
+    "color_action_bar_bg": "#ffa6da",
+    "color_action_bar_text": "#000000",
+    "color_action_bar_text_active": "#ffffff",
+    "color_drawer_bg": "#ff98d0",
+    "color_drawer_text": "#ffffff",
+    "color_footer_bg": "#ffebfb",
+    "color_footer_text": "#5c5c5c",
+    "type_header_family": "assistant_n4",
+    "type_header_base_size": "25px",
+    "type_button_base_size": "14px",
+    "type_header_transform": false,
+    "type_header_spacing": "none",
+    "type_base_family": "basic_commercial_n4",
+    "type_base_size": "15px",
+    "cart_type": "page",
+    "cart_notes_enable": true,
+    "share_image": "",
+    "social_facebook_link": "",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_google_plus_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "favicon": "shopify:\/\/shop_images\/peachii_favicon.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1a1a1a",
+    "checkout_button_color": "#1a1a1a",
+    "checkout_error_color": "#de2a2a",
+    "checkout_logo": "",
+    "checkout_use_body_background_image": false,
+    "checkout_use_header_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "color_drawer_inputs": "#ffffff",
+    "favicon_enable": false,
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement": false,
+          "home_page_only": false,
+          "text": "Peachiie Box Reservations and Ita Jacket Pre-Orders NOW OPEN!",
+          "link": "",
+          "color_bg": "#000000",
+          "color_text": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Shopify_white_logo_01_450x_NEW_02.png",
+          "logo_slideshow": "",
+          "logo_width": "180"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "1596826491688": {
+            "type": "image",
+            "settings": {
+              "hero_slide": "shopify:\/\/shop_images\/Homepage_Banner_SpringtimeSakur04.png",
+              "image_position": "center center",
+              "hero_title": "",
+              "button_label": "",
+              "button_link": "https:\/\/peachiieshop.com\/products\/kawaii-springtime-sakura-t-shirt"
+            }
+          }
+        },
+        "block_order": [
+          "1596826491688"
+        ],
+        "settings": {
+          "hero_home_height": "full",
+          "hero_home_auto": false,
+          "hero_home_auto_speed": 5,
+          "hero_icons_color": "#ffffff",
+          "hero_overlay_color": "#000000",
+          "hero_overlay_amount": 0
+        }
+      },
+      "newsletter-signup": {
+        "type": "newsletter-signup",
+        "settings": {
+          "heading": "Peachiie Shop Newsletter",
+          "subheading": "<p>Join&nbsp;the e-mail list and get exclusive offers!<\/p>"
+        }
+      },
+      "sidebar-menu": {
+        "type": "sidebar-menu",
+        "settings": {
+          "sidebar_top_link_list": "main-menu",
+          "sidebar_bottom_link_list": "footer"
+        }
+      },
+      "action-bar": {
+        "type": "action-bar",
+        "settings": {
+          "action_bar_link_list": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_link_list": "footer",
+          "show_payment_icons": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "skip_first_product_image": false,
+          "product_image_type": "portrait",
+          "show_vendor": false,
+          "show_quantity_selector": false,
+          "social_sharing_products": true,
+          "enable_payment_button": true,
+          "product_form_width": "small"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "product_image_type": "portrait",
+          "product_image_size": "small",
+          "product_image_spacing": false,
+          "vendor_enable": false,
+          "collection_sort_enable": true,
+          "collection_tags_enable": false,
+          "pagination_type": "numbers"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "vendor_enable": false
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "settings": {
+          "home_page_full_width": false,
+          "section_title": "Talk about your brand",
+          "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+          "text_size": "medium"
+        }
+      },
+      "1588197436530": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/95384789_2817972138252327_925977331061751808_n.jpg",
+          "layout": "left",
+          "title": "Meet fawnbomb",
+          "text": "<p>Hey there! I'm fawnbomb (or Gennie), the artist behind Peachiie Shop! I'm a half-asian, Canadian based designer working in the animation industry with an obsession for Harajuku fashion and art :)<\/p>\n<p><\/p>\n<p>If you love pastels, black, or a bit of both-- you've come to the right place!&nbsp;I love making cute original characters and i love street fashion so&nbsp;i've tried my best to feature a comprehensive collection&nbsp;combining both, for&nbsp;anyone to wear. I will always do my best to offer affordable prices and a range of sizes for all body types!<\/p>\n<p><\/p>\n<p>My Instagram accounts are:<\/p>\n<p>- <strong>@fawnbomb<\/strong> for more&nbsp;personal posts and my daily life<\/p>\n<p>- <strong>@peachiie.shop<\/strong> for my merch and behind the scenes!<br><br><a href=\"\/blogs\/news\/how-j-fashion-saved-my-life\" title=\"How J-Fashion saved my life\">To read more about&nbsp;origins of Peachiie Shop click here!<\/a><\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "1593814326198": {
+        "type": "custom-html",
+        "settings": {
+          "code": "<a href=\"https:\/\/peachiieshop.com\/pages\/learn-more-peachiie-box\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2709\/5762\/files\/peachiiebox_soon.png?v=1593522100\"><\/a>"
+        }
+      },
+      "1593820698575": {
+        "type": "custom-html",
+        "settings": {
+          "code": "<a href=\"https:\/\/peachiieshop.com\/products\/fawnbombs-magical-ita-jacket-pre-order\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2709\/5762\/files\/ItaJacket_PreOrders.jpg?v=1593820360\"><\/a>"
+        }
+      },
+      "1596829642172": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "kawaii-springtime-sakura-t-shirt",
+          "show_vendor": false,
+          "show_quantity_selector": false,
+          "show_share_buttons": true,
+          "enable_payment_button": true
+        }
+      },
+      "1597449123664": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 25,
+          "feed_width": 100,
+          "html_area": "<!-- -->"
+        }
+      }
+    },
+    "content_for_index": [
+      "1596829642172",
+      "newsletter-signup",
+      "1593814326198",
+      "1593820698575",
+      "1597449123664",
+      "1588197436530"
+    ]
+  },
+  "presets": {
+    "Black & white": {
+      "cart_type": "drawer",
+      "cart_notes_enable": false,
+      "checkout_accent_color": "#1a1a1a",
+      "checkout_body_background_color": "#fff",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_button_color": "#1a1a1a",
+      "checkout_error_color": "#de2a2a",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_input_background_color_mode": "white",
+      "checkout_logo": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_use_body_background_image": false,
+      "checkout_use_header_image": false,
+      "checkout_use_sidebar_background_image": false,
+      "color_action_bar_bg": "#1a1a1a",
+      "color_action_bar_text": "#ffffff",
+      "color_action_bar_text_active": "#ffffff",
+      "color_body_bg": "#ffffff",
+      "color_body_headings": "#1a1a1a",
+      "color_body_links": "#1a1a1a",
+      "color_body_text": "#666666",
+      "color_borders": "#eeeeee",
+      "color_button_bg": "#1a1a1a",
+      "color_button_text": "#fff",
+      "color_drawer_bg": "#ffffff",
+      "color_drawer_inputs": "#ffffff",
+      "color_drawer_text": "#1a1a1a",
+      "color_footer_bg": "#f9f9f9",
+      "color_footer_text": "#5c5c5c",
+      "color_nav_bg": "#ffffff",
+      "color_nav_text": "#1a1a1a",
+      "color_sale_badge": "#dac08e",
+      "favicon_enable": false,
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "type_base_family": "open_sans_n4",
+      "type_base_size": "15px",
+      "type_button_base_size": "16px",
+      "type_header_base_size": "25px",
+      "type_header_family": "karla_n7",
+      "type_header_spacing": "0.05em",
+      "type_header_transform": false,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "show_announcement": true,
+            "color_bg": "#dbc18b"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_width": "180"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slider-0": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slider-0"
+          ],
+          "settings": {
+            "hero_icons_color": "#ffffff",
+            "hero_overlay_color": "#000000"
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {}
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "home_featured_products": "frontpage",
+            "product_image_type": "portrait",
+            "product_image_size": "medium",
+            "product_image_spacing": false
+          }
+        },
+        "newsletter-signup": {
+          "type": "newsletter-signup",
+          "settings": {}
+        },
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "sidebar_top_link_list": "main-menu",
+            "sidebar_bottom_link_list": "footer"
+          }
+        },
+        "action-bar": {
+          "type": "action-bar",
+          "settings": {
+            "action_bar_link_list": "main-menu"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "footer_link_list": "footer"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {}
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "product_image_type": "portrait",
+            "product_image_size": "medium",
+            "product_image_spacing": false
+          }
+        }
+      },
+      "content_for_index": [
+        "rich-text",
+        "featured-collection",
+        "newsletter-signup"
+      ]
+    },
+    "Vibrant": {
+      "cart_type": "drawer",
+      "cart_notes_enable": false,
+      "checkout_accent_color": "#f26241",
+      "checkout_body_background_color": "#fff",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_button_color": "#1b100e",
+      "checkout_error_color": "#b01919",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_input_background_color_mode": "white",
+      "checkout_logo": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_sidebar_background_color": "#f4f4f4",
+      "checkout_use_body_background_image": false,
+      "checkout_use_header_image": false,
+      "checkout_use_sidebar_background_image": false,
+      "color_action_bar_bg": "#1b100e",
+      "color_action_bar_text": "#fff",
+      "color_action_bar_text_active": "#f26241",
+      "color_body_bg": "#ffffff",
+      "color_body_headings": "#1b100e",
+      "color_body_links": "#f26241",
+      "color_body_text": "#1b100e",
+      "color_borders": "#eceff1",
+      "color_button_bg": "#1b100e",
+      "color_button_text": "#fff",
+      "color_drawer_bg": "#f6f6f6",
+      "color_drawer_inputs": "#ffffff",
+      "color_drawer_text": "#3e3e3e",
+      "color_footer_bg": "#f4f4f4",
+      "color_footer_text": "#4a4a4a",
+      "color_nav_bg": "#f26241",
+      "color_nav_text": "#ffffff",
+      "color_sale_badge": "#f26241",
+      "favicon_enable": false,
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "type_base_family": "open_sans_n4",
+      "type_base_size": "16px",
+      "type_button_base_size": "16px",
+      "type_header_base_size": "24px",
+      "type_header_family": "quantico_n7",
+      "type_header_spacing": "0.1em",
+      "type_header_transform": true,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "show_announcement": true,
+            "color_bg": "#f6602f"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_width": "180"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slider-0": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slider-0"
+          ],
+          "settings": {
+            "hero_icons_color": "#ffffff",
+            "hero_overlay_color": "#000"
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {}
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "home_featured_products": "frontpage",
+            "product_image_type": "landscape",
+            "product_image_size": "large",
+            "product_image_spacing": true
+          }
+        },
+        "newsletter-signup": {
+          "type": "newsletter-signup",
+          "settings": {}
+        },
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "sidebar_top_link_list": "main-menu",
+            "sidebar_bottom_link_list": "footer"
+          }
+        },
+        "action-bar": {
+          "type": "action-bar",
+          "settings": {
+            "action_bar_link_list": "main-menu"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "footer_link_list": "footer"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "product_image_type": "landscape",
+            "product_image_size": "large",
+            "product_image_spacing": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "rich-text",
+        "featured-collection",
+        "newsletter-signup"
+      ]
+    }
+  }
+}

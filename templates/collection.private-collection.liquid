@@ -1,0 +1,8 @@
+{%if customer.tags contains 'active_subscriber'%}
+
+{% section 'collection-template' %}
+{%else%}
+
+{{ pages.no-access.content }}
+
+{%endif%}
