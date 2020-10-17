@@ -284,6 +284,14 @@
               {%- endcapture -%}
               {{ taxes_shipping_checkout }}
             {% raw %}</p>
+            <!-- Start Pre-order Confirmation-->
+            <p style="float: none; text-align: right; clear: both; margin: 10px 0;">
+              <input style="float:none; vertical-align: middle;" type="checkbox" id="agree" />
+              <label style="display:inline; float:none" for="agree">
+                I don't agree with the <a href="/pages/terms-and-conditions">terms and conditions</a>.
+              </label>
+            </p>
+            <!-- End Pre-order Confirmation-->
             <button type="submit" class="btn btn--full cart__checkout" name="checkout">
               {% endraw %}{{ 'cart.general.checkout' | t }}{% raw %}
             </button>
