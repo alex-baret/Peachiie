@@ -286,16 +286,18 @@
             {% raw %}</p>
 
             <!-- Start Pre-order Confirmation-->
-            {% for tag in product.tags % }
-              {% if tag == 'pre-order'%}
+            {% for item in cart.items %}
+            {% for tag in product.tags %}
+              {% if tag contains 'pre-order'%}
                   <p style="float: none; text-align: right; clear: both; margin: 10px 0;">
                   <input style="float:none; vertical-align: middle;" type="checkbox" id="agree" />
                   <label style="display:inline; float:none" for="agree">
                     I understand that this is a pre-order and if i have multiple items in my order they will not ship until the pre-order items are also ready to ship.
                    </label>
                   </p>
-            
-            {% endfor%}
+              {% endif %}
+            {% endfor %}
+            {% endfor %}
             
             <!-- End Pre-order Confirmation-->
             <button type="submit" class="btn btn--full cart__checkout" name="checkout">
